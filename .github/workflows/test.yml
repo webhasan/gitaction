@@ -12,6 +12,7 @@ jobs:
       - run: npm run test
   deploy-application:
     runs-on: ubuntu-latest
+    needs: [run-app-testing]
     steps: 
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
